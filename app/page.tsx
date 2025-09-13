@@ -1,7 +1,8 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
 
+// Test cambio para commit
 import React, { useState } from "react";
+
 
 
 /**
@@ -296,11 +297,14 @@ const Payments = () => (
 const Contact = () => {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
-  const onSubmit = (e) => {
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Replace with your form handler (Formspree, Resend, backend API, etc.)
     setSent(true);
   };
+  
+  
+  
   return (
     <section id="contact" className="py-16 lg:py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
